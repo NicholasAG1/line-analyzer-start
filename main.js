@@ -5,19 +5,19 @@ document.getElementById('analyze').addEventListener('click', analyzeLine);
 
 // Event Function
 function analyzeLine() {
-    // Get Inputted Point Data (x1, y1) and (x2, y2)
-    let x1 = Number(document.getElementById('x1').value);
-    let y1 = Number(document.getElementById('y1').value);
-    let x2 = Number(document.getElementById('x2').value);
-    let y2 = Number(document.getElementById('y2').value);
+    // Get Inputted Point Data (pt1x, pt1y) and (pt2x, pt2y)
+    let pt1x = Number(document.getElementById('pt1x').value);
+    let pt1y = Number(document.getElementById('pt1y').value);
+    let pt2x = Number(document.getElementById('pt2x').value);
+    let pt2y = Number(document.getElementById('pt2y').value);
 
     // Call Analyze Functions and Display results
-    document.getElementById('length').innerHTML = getLength(x1, y1, x2, y2);
-    // document.getElementById('slope').innerHTML = getSlope(x1, y1, x2, y2);
-    // document.getElementById('description').innerHTML = getDescription(x1, y1, x2, y2);
-    // document.getElementById('location-1').innerHTML = getPointLocation(x1, y1);
-    // document.getElementById('location-2').innerHTML = getPointLocation(x2, y2);
-    // document.getElementById('equation').innerHTML = getEquation(x1, y1, x2, y2);
+    document.getElementById('length').innerHTML = getLength(pt1x, pt1y, pt2x, pt2y);
+    // document.getElementById('slope').innerHTML = getSlope(pt1x, pt1y, pt2x, pt2y);
+    // document.getElementById('description').innerHTML = getDescription(pt1x, pt1y, pt2x, pt2y);
+    // document.getElementById('location-1').innerHTML = getPointLocation(pt1x, pt1y);
+    // document.getElementById('location-2').innerHTML = getPointLocation(pt2x, pt2y);
+    // document.getElementById('equation').innerHTML = getEquation(pt1x, pt1y, pt2x, pt2y);
 }
 
 // Line Analyzer Functions (Write your solutions here... getLength is done for you)
@@ -28,4 +28,6 @@ function getLength(x1, y1, x2, y2) {
     let run = x2 - x1;
     return (rise ** 2 + run ** 2) ** 0.5
 }
+
+
 
