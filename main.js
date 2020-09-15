@@ -32,26 +32,23 @@ function getLength(x1, y1, x2, y2) {
 function getSlope(x1, y1, x2, y2) {
     let rise = y2 - y1
     let run = x2 - x1
-    return (rise % run)
+    return (rise / run)
 }
 
 function getDescription(x1, x2, y1, y2) {
-    getSlope(x1, y1, x2, y2); {
-        let rise = x1 - y1
-        let run = x2 - x1
-        rise % run == slope 
-    }
+    let slope = getSlope(x1, y1, x2, y2); 
+    
     if (slope < 0) {
         return 'decreasing'
     }else if (slope > 0) {
         return 'incresing'
-    }else if(x1 == x2){
+    }else if(slope === 0){
         return 'horizontal'
     }else 
         return 'vertical'
 }
 
-function getPointLocation(x, y) {
+function getPointLocation (x, y) {
     if (x == 0, y == 0) {
         return 'origin'
     }else if (x == 0) {
